@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/SafeCore.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+    @*<header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SafeCore</a>
@@ -29,12 +29,85 @@
                 </div>
             </div>
         </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    </header>*@
+
+    
+
+    <div class="container-fluid px-0 h-100">
+            <div class="row vh-100 collapse show no-gutters d-flex position-relative overflow-auto">
+                <div class="col-1 p-0 vh-100 h-100 w-sidebar navbar-collapse collapse d-none d-md-flex sidebar">
+                    <!-- fixed sidebar -->
+                    <div class="position-fixed bg-dark text-white h-100 w-sidebar">
+                        <div class="sidebar-title"> Menu </div>
+                        <ul class="list-unstyled components" style=" height:60vh;">
+
+
+                            @* HOW TO USE => @Html.ActionLink(Value, Action, Controller) *@
+
+
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-home fa-lg"></i>Inicio
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-history fa-lg"></i>Historial
+                                </a>
+                            </li>
+
+                            <li data-toggle="collapse" data-target="#evidencias" class="collapsed active">
+                                <a href="#"><i class="fa fa-barcode fa-lg" aria-hidden="true"></i> Productos </a>
+                            </li>
+                            <ul class="sub-menu collapse" id="evidencias">
+                                <li>Ingresar producto</li>
+                                <li>Entregar producto</li>
+                            </ul>
+
+                            <li data-toggle="collapse" data-target="#movimientos" class="collapsed active">
+                                <a href="#"><i class="fa fa-retweet fa-lg"></i> Gestinar bodega </a>
+                            </li>
+                            <ul class="sub-menu collapse" id="movimientos">
+                                <li>Ingreso</li>
+                                <li>Retiro</li>
+                            </ul>
+
+                            <li data-toggle="collapse" data-target="#dashboards" class="collapsed active">
+                                <a href="#"><i class="fa fa-dashboard fa-lg"></i> Dashboard </a>
+                            </li>
+                            <ul class="sub-menu collapse" id="dashboards">
+                                <li>Dashboard 1</li>
+                                <li>Dashboard 2</li>
+                            </ul>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-refresh fa-lg"></i> Sincronizar datos
+                                </a>
+                            </li>
+                    </div>
+                </div>
+
+            <!-- START PAGE CONTENT -->
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - SafeCore.</p>
+                </footer>
+            </div>
+            <!-- END PAGE CONTENT -->
+
+            </div>
+        </div>
+
+
+
+    
+
+    
 
     <footer class="border-top footer text-muted">
         <div class="container">
