@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SafeCore.styles.css" asp-append-version="true" />
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
 </head>
 <body>
     @*<header>
@@ -32,91 +33,119 @@
     </header>*@
 
     
+    <!-- SIDE NVABAR -->
+    <div class="wrapper">
 
-    <div class="container-fluid px-0 h-100">
-            <div class="row vh-100 collapse show no-gutters d-flex position-relative overflow-auto">
-                <div class="col-1 p-0 vh-100 h-100 w-sidebar navbar-collapse collapse d-none d-md-flex sidebar">
-                    <!-- fixed sidebar -->
-                    <div class="position-fixed bg-dark text-white h-100 w-sidebar">
-                        <div class="sidebar-title"> Menu </div>
-                        <ul class="list-unstyled components" style=" height:60vh;">
+        <nav id="sidebar">
 
+            <div class="sidebar-header">
+                <h3>Sidebar Header</h3>
+            </div>
+            <ul class="list-unstyled components">
+                
+                <p>The Providers</p>
+                <li class="active">
+                    <a href="#HomeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
 
-                            @* HOW TO USE => @Html.ActionLink(Value, Action, Controller) *@
+                    <ul class="collapse list-unstyled" id="HomeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#PageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="PageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                    </ul>
+                </li>
 
+                <li>
+                    <a href="#">Policy</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
 
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-home fa-lg"></i>Inicio
-                                </a>
-                            </li>
+            </ul>
 
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-history fa-lg"></i>Historial
-                                </a>
-                            </li>
+        </nav>
 
-                            <li data-toggle="collapse" data-target="#evidencias" class="collapsed active">
-                                <a href="#"><i class="fa fa-barcode fa-lg" aria-hidden="true"></i> Productos </a>
-                            </li>
-                            <ul class="sub-menu collapse" id="evidencias">
-                                <li>Ingresar producto</li>
-                                <li>Entregar producto</li>
-                            </ul>
+        <div id="content">
 
-                            <li data-toggle="collapse" data-target="#movimientos" class="collapsed active">
-                                <a href="#"><i class="fa fa-retweet fa-lg"></i> Gestinar bodega </a>
-                            </li>
-                            <ul class="sub-menu collapse" id="movimientos">
-                                <li>Ingreso</li>
-                                <li>Retiro</li>
-                            </ul>
-
-                            <li data-toggle="collapse" data-target="#dashboards" class="collapsed active">
-                                <a href="#"><i class="fa fa-dashboard fa-lg"></i> Dashboard </a>
-                            </li>
-                            <ul class="sub-menu collapse" id="dashboards">
-                                <li>Dashboard 1</li>
-                                <li>Dashboard 2</li>
-                            </ul>
-
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-refresh fa-lg"></i> Sincronizar datos
-                                </a>
-                            </li>
-                    </div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
                 </div>
+            </nav>
 
             <!-- START PAGE CONTENT -->
             <div class="container">
                 <main role="main" class="pb-3">
                     @RenderBody()
                 </main>
-                <footer>
-                    <p>&copy; @DateTime.Now.Year - SafeCore.</p>
-                </footer>
             </div>
             <!-- END PAGE CONTENT -->
 
-            </div>
+            <footer class="border-top footer text-muted">
+                <div class="container d-flex" id="footerContainer">
+                    &copy; @DateTime.Now.Year - SafeCore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+            </footer>
+
         </div>
+
+        
+
+    </div>
+
+
 
 
 
     
 
+
+
+    
+    
     
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - SafeCore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- BOOTSTRAP 4.6 SCRIPTS FOR NAVBAR -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+
+        $(document).ready(function () {
+            $("#sidebarCollapse").on('click', function () {
+                $("#sidebar").toggleClass('active');
+            });
+        });
+
+    </script>
+
 </body>
 </html>
