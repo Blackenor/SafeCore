@@ -44,63 +44,122 @@
             <ul class="list-unstyled components">
                 
                 <p>Menu</p>
+
+
                 <li>
-                    <a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                    <a href="#Administracion" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administración</a>
+
+                    <ul class="collapse list-unstyled" id="Administracion">
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Crear capacitación</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Planificar visita</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Cálculo de accidentabilidad</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Actividades</a>
+                        </li>
+                    </ul>
                 </li>
+
+                <li>
+                    <a href="#Asesoria" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Asesoría</a>
+
+                    <ul class="collapse list-unstyled" id="Asesoria">
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Solicitar asesoría especial</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Ingresar asesoría</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#Personal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Personal</a>
+
+                    <ul class="collapse list-unstyled" id="Personal">
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">clientes</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Pagos clientes</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">profesionales</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Notificar atrasos</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#ActMejora" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Actividad de mejora</a>
+
+                    <ul class="collapse list-unstyled" id="ActMejora">
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Ingresar</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Revisar</a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li >
-                    <a href="#Options" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Options</a>
+                    <a href="#Checklist" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Checklist</a>
 
-                    <ul class="collapse list-unstyled" id="Options">
+                    <ul class="collapse list-unstyled" id="Checklist">
                         <li>
-                            <a asp-area="" asp-controller="Report" asp-action="ReportClient">Reporte cliente</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Crear</a>
                         </li>
                         <li>
-                            <a href="#">Option 2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#PageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="PageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Responder</a>
                         </li>
                     </ul>
                 </li>
 
-                <li>
+                <li >
+                    <a href="#Reportes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Generar reportes</a>
+
+                    <ul class="collapse list-unstyled" id="Reportes">
+                        <li>
+                            <a asp-area="" asp-controller="Report" asp-action="ReportClient" >Reporte cliente</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Report" asp-action="ReportClient" >Reporte global</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Report" asp-action="Index" >Reportar accidente</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <ul class="list-unstyled components mt-auto" id="bottomOptions">
+                <li class="">
                     <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#">Log out</a>
                 </li>
-
             </ul>
-
-            <ul class="list-unstyled components" id="bottomOptions">
-                @*<ul>*@
-                    <li class="mt-auto">
-                        <a href="#">Configuration</a>
-                    </li>
-                    <li>
-                        <a href="#">Log out</a>
-                    </li>
-                @*</ul>*@
-                
-            </ul>
-                
-
 
         </nav>
+
+
+
+        <!-- HERE START THE CONTENT -->
 
         <div id="content">
 
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    @*cambio en el background*@
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                         <span>Toggle Sidebar</span>
@@ -124,23 +183,13 @@
             </footer>
 
         </div>
-        
+
 
     </div>
 
 
 
 
-
-    
-
-
-
-    
-    
-    
-
-    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
