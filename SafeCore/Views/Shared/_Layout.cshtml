@@ -39,25 +39,25 @@
         <nav id="sidebar">
 
             <div class="sidebar-header">
-                <h3>Sidebar Header</h3>
+                <h3>Safe Core</h3>
             </div>
             <ul class="list-unstyled components">
                 
-                <p>The Providers</p>
-                <li class="active">
-                    <a href="#HomeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <p>Menu</p>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li >
+                    <a href="#Options" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Options</a>
 
-                    <ul class="collapse list-unstyled" id="HomeSubmenu">
+                    <ul class="collapse list-unstyled" id="Options">
                         <li>
-                            <a href="#">Home 1</a>
+                            <a href="#">Option 1</a>
                         </li>
                         <li>
-                            <a href="#">Home 2</a>
+                            <a href="#">Option 2</a>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="#">About</a>
                 </li>
                 <li>
                     <a href="#PageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
@@ -72,13 +72,27 @@
                 </li>
 
                 <li>
-                    <a href="#">Policy</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                 </li>
                 <li>
                     <a href="#">Contact</a>
                 </li>
 
             </ul>
+
+            <ul class="list-unstyled components" id="bottomOptions">
+                @*<ul>*@
+                    <li class="mt-auto">
+                        <a href="#">Configuration</a>
+                    </li>
+                    <li>
+                        <a href="#">Log out</a>
+                    </li>
+                @*</ul>*@
+                
+            </ul>
+                
+
 
         </nav>
 
@@ -100,15 +114,15 @@
                 </main>
             </div>
             <!-- END PAGE CONTENT -->
+            
 
-            <footer class="border-top footer text-muted">
+            <footer class="footer text-muted">
                 <div class="container d-flex" id="footerContainer">
                     &copy; @DateTime.Now.Year - SafeCore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                 </div>
             </footer>
 
         </div>
-
         
 
     </div>
@@ -139,9 +153,10 @@
 
     <script>
 
+        /* NAVBAR TOGGLE METHOD*/
         $(document).ready(function () {
             $("#sidebarCollapse").on('click', function () {
-                $("#sidebar").toggleClass('active');
+                $("#sidebar").toggleClass('disabled');
             });
         });
 
