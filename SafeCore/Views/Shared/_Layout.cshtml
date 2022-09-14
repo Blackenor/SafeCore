@@ -36,119 +36,125 @@
     <!-- SIDE NVABAR -->
     <div class="wrapper">
 
-        <nav id="sidebar">
+        <nav id="sidebar" >
 
             <div class="sidebar-header">
                 <h3>Safe Core</h3>
             </div>
-            <ul class="list-unstyled components">
-                
-                <p>Menu</p>
 
+            <div class="d-flex justify-content-between" id="sidebarContainer">
 
-                <li>
-                    <a href="#Administracion" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administración</a>
+                <div id="topOptions">
+                    <ul class="list-unstyled components overflow-auto">
 
-                    <ul class="collapse list-unstyled" id="Administracion">
                         <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Crear capacitación</a>
+                            <a href="#Administracion" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administración</a>
+
+                            <ul class="collapse list-unstyled" id="Administracion">
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Crear capacitación</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Planificar visita</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Cálculo de accidentabilidad</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Actividades</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#Asesoria" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Asesoría</a>
+
+                            <ul class="collapse list-unstyled" id="Asesoria">
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Solicitar asesoría especial</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Ingresar asesoría</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#Personal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Personal</a>
+
+                            <ul class="collapse list-unstyled" id="Personal">
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">clientes</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Pagos clientes</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">profesionales</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Notificar atrasos</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#ActMejora" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Actividad de mejora</a>
+
+                            <ul class="collapse list-unstyled" id="ActMejora">
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Ingresar</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Revisar</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li >
+                            <a href="#Checklist" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Checklist</a>
+
+                            <ul class="collapse list-unstyled" id="Checklist">
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Crear</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Responder</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li >
+                            <a href="#Reportes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Generar reportes</a>
+
+                            <ul class="collapse list-unstyled" id="Reportes">
+                                <li>
+                                    <a asp-area="" asp-controller="Report" asp-action="ReportClient" >Reporte cliente</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Report" asp-action="ReportClient" >Reporte global</a>
+                                </li>
+                                <li>
+                                    <a asp-area="" asp-controller="Report" asp-action="Index" >Reportar accidente</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div id="bottomOptions">
+                    <ul class="list-unstyled components" style="margin-bottom: 0; padding: 0;">
+                        <li class="">
+                            <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Planificar visita</a>
-                        </li>
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Cálculo de accidentabilidad</a>
-                        </li>
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Actividades</a>
+                            <a href="#">Log out</a>
                         </li>
                     </ul>
-                </li>
+                </div>
 
-                <li>
-                    <a href="#Asesoria" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Asesoría</a>
-
-                    <ul class="collapse list-unstyled" id="Asesoria">
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Solicitar asesoría especial</a>
-                        </li>
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Ingresar asesoría</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#Personal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Personal</a>
-
-                    <ul class="collapse list-unstyled" id="Personal">
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">clientes</a>
-                        </li>
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Pagos clientes</a>
-                        </li>
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">profesionales</a>
-                        </li>
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Notificar atrasos</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#ActMejora" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Actividad de mejora</a>
-
-                    <ul class="collapse list-unstyled" id="ActMejora">
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Ingresar</a>
-                        </li>
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Revisar</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li >
-                    <a href="#Checklist" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Checklist</a>
-
-                    <ul class="collapse list-unstyled" id="Checklist">
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Crear</a>
-                        </li>
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Responder</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li >
-                    <a href="#Reportes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Generar reportes</a>
-
-                    <ul class="collapse list-unstyled" id="Reportes">
-                        <li>
-                            <a asp-area="" asp-controller="Report" asp-action="ReportClient" >Reporte cliente</a>
-                        </li>
-                        <li>
-                            <a asp-area="" asp-controller="Report" asp-action="ReportClient" >Reporte global</a>
-                        </li>
-                        <li>
-                            <a asp-area="" asp-controller="Report" asp-action="Index" >Reportar accidente</a>
-                        </li>
-                    </ul>
-                </li>
-
-            </ul>
-
-            <ul class="list-unstyled components mt-auto" id="bottomOptions">
-                <li class="">
-                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                </li>
-                <li>
-                    <a href="#">Log out</a>
-                </li>
-            </ul>
+            </div>
 
         </nav>
 
@@ -168,7 +174,7 @@
             </nav>
 
             <!-- START PAGE CONTENT -->
-            <div class="container">
+            <div id="mainContent" class="container">
                 <main role="main" class="pb-3">
                     @RenderBody()
                 </main>

@@ -1,5 +1,19 @@
 /* BASE DESIGN */
 
+/*
+    --- COLORS PALETTE ---
+
+    Purple light: #7A46D5
+    Purple hard-dark: #6a29dc
+    Purple dark: #561F99
+    Blue Dark: #08263E
+    dark-gray: #505050;
+    purple-gray: #5F5B64;
+
+*/
+
+
+
 html {
   font-size: 14px;
 }
@@ -33,11 +47,15 @@ footer {
 
 *::-webkit-scrollbar {
     width: 10px;
-    height: 15px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-corner{
+    background-color: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(180deg, #08263E 80%, #08263E 99%);
+    background-image: linear-gradient(180deg, #200C39 10%, #561F99 50%, #200C39 90%);
     /*box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);*/
     background-color: #1E1E1E;
     border-radius: 100px;
@@ -75,17 +93,6 @@ a:focus {
     margin-left: -250px !important;
 }
 
-#sidebar .sidebar-header {
-    padding: 30px;
-    background: #505050;
-    text-align: center;
-    border-bottom: solid 1px gray;
-    margin-left: 10px;
-    margin-right: 10px;
-
-    margin-top: 10px;
-
-}
 
 #sidebar ul.components {
     padding: 20px 0;
@@ -143,25 +150,62 @@ ul ul a{
     margin-left: 30px !important;
 }
 
+#sidebarContainer{
+    display: flex;
+    flex-direction: column !important;
+    align-content: space-between !important;
+}
+
+#sidebar .sidebar-header {
+    padding: 30px;
+    background: #505050;
+    text-align: center;
+    border-bottom: solid 1px gray;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/* TOP OPTIONS */
+
+#topOptions {
+    max-height: 73vh !important;
+    overflow: auto;
+    position: fixed;
+    max-width: 250px !important;
+    min-width: 0;
+    width: 100vw;
+}
+
+#topOptions::-webkit-scrollbar {
+    width: 4px;
+}
+
+
+/* BOTTOM OPTIONS */
+
+#bottomOptions {
+    /*margin-top: auto !important;*/
+    max-width: 250px !important;
+    min-width: 0;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    background-color: #505050;
+}
+
+
 #content {
     /*width: auto;*/
     width: 100vw;
     padding: 10px;
     min-height: 100vh;
-    
     transition: all 0.3s;
 }
 
-/* BOTTOM OPTIONS */
-
-#bottomOptions {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    max-width: 250px;
-    min-width: 0px;
-    overflow-y: auto;
-    list-style-type: none;
-    margin: 0;
-    padding: 0 !important;
+#mainContent {
+    border: dashed 1px yellowgreen;
+    padding: 10px;
+    margin-top: 20px;
+    padding-top: 800px;
 }
