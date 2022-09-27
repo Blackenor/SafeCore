@@ -149,7 +149,7 @@
                             <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li>
-                            <a  onclick="location.href='@Url.Action("login","Login")'">Sign Out</a>
+                            <a asp-controller="Login" asp-action="login" onclick=confirm_meth()>Sign Out</a>  
                         </li>
                     </ul>
                 </div>
@@ -215,7 +215,18 @@
                 $("#sidebar").toggleClass('disabled');
             });
         });
-
+          /* FUNCION PARA CONFIRMAR*/
+         function confirm_meth()
+         {
+             var confirmacion = confirm("Confirma cerrar sesión?");
+             if( confirmacion==true)
+             {  
+             }
+             else
+             {
+                 document.writeln ("<b>You had clic on 'NO' Button</b>");
+             }
+         } 
     </script>
 
 </body>
