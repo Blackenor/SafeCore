@@ -35,12 +35,12 @@ body {
 }
 
 footer {
-    border-top: solid 1px gray;
+    /*border-top: solid 1px gray;*/
     width: 65vw !important;
 }
 
 #footerContainer {
-    
+    color: #cccccc;
     max-width: 100px;
     font-size: 0.9em !important;
 }
@@ -63,13 +63,37 @@ footer {
 
 /* -------------------------------- */
 
+/* NAVBAR TOP */
+
+.barStatic {
+    background-color: #333136;
+}
+
+.RFIDCORE {
+    color: #cccccc !important;
+    font-size: 20px
+}
+
+#sHeader_spacing {
+    margin-bottom: 125px !important;
+}
+
+#sHeader {
+    padding-top: 58px !important;
+    padding-bottom: 10px !important;
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+    position: fixed;
+    margin-left: 35px !important;
+}
+
 
 /* NAVBAR MENU */
 #sidebar
 a,
 a:hover,
 a:focus {
-    color: #cccccc ;
+    color: #cccccc;
     text-decoration: none;
     transition: all 0.2s;
 }
@@ -84,7 +108,7 @@ a:focus {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #505050;
+    background: #333136;
     color: #cccccc;
     transition: all 0.3s;
 }
@@ -116,13 +140,13 @@ a:focus {
     border-top-left-radius: 7px;
 }
 
-#sidebar ul li a:hover {
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-    border-left: solid #6a29dc 2px;
-    background-image: linear-gradient(90deg, #6a29dc 20%, #505050 99%);
-    transition: all 0.2s;
-}
+    #sidebar ul li a:hover {
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border-left: solid #6a29dc 2px;
+        background-image: linear-gradient(90deg, #6a29dc 20%, #333136 99%);
+        transition: all 0.2s;
+    }
 
 #sidebar ul li.active > a,
 a[aria-expanded="true"] {
@@ -130,7 +154,7 @@ a[aria-expanded="true"] {
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     color: white;
-    background-image: linear-gradient(90deg, #6a29dc 40%, #505050 99%);
+    background-image: linear-gradient(90deg, #6a29dc 40%, #333136 99%);
 }
 
 a[data-toggle="collapse"]{
@@ -158,7 +182,7 @@ ul ul a{
 
 #sidebar .sidebar-header {
     padding: 30px;
-    background: #505050;
+    background: #333136;
     text-align: center;
     border-bottom: solid 1px gray;
     margin-left: 10px;
@@ -166,22 +190,16 @@ ul ul a{
     margin-top: 10px;
 }
 
-/*.collapse-container {
-    padding-left: 0 !important;
-
-
-}
-
 #sidebarCollapse {
-    background-color: #505050 !important;
-    border: 1px solid #505050;
-    color: #cccccc;
-    font-size: 20px;
+    background-color: transparent;
+    border-color: transparent;
+    /*border: 1px solid gray;*/
 }
 
-.navbar {
-    padding-top: 0;
-}*/
+.top-spacing {
+    margin-top: 40px;
+}
+
 
 
 
@@ -209,7 +227,7 @@ ul ul a{
     width: 100vw;
     position: fixed;
     bottom: 0;
-    background-color: #505050;
+    background-color: #333136;
 }
 
 
@@ -217,16 +235,15 @@ ul ul a{
     /*width: auto;*/
     width: 100vw;
     padding: 10px;
-    padding-top: 0 !important;
-    padding-left: 0 !important; 
     min-height: 100vh;
     transition: all 0.3s;
 }
 
 #mainContent {
-    border: dashed 1px yellowgreen;
+    border: dashed 1px aqua;
     padding: 10px;
     margin-top: 20px;
+    padding-bottom: 1000px;
 }
 
 
@@ -346,19 +363,12 @@ th {
 
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
+/*.body-content {
     padding-left: 15px;
     padding-right: 15px;
-}
+}*/
 
-.barStatic {
-    background-color: #393939;
-}
 
-.RFIDCORE {
-    color: #cccccc !important;
-    font-size: 20px
-}
 
 
 
@@ -466,16 +476,9 @@ ul ul a {
     margin-bottom: 15px;
 }
 
-#sHeader {
-    border-top: solid 1px gray;
-    border-bottom: solid 1px gray;
-    position: fixed;
-    margin-left: 35px !important;
-}
 
-#sHeader_spacing {
-    margin-bottom: 80px !important;
-}*/
+
+
 
 
 
@@ -513,13 +516,9 @@ ul ul a {
 
 /* --- CONTENT --- */
 
-/*#sidebarCollapse {
-    background-color: transparent;
-    border-color: transparent;*/
-    /*border: 1px solid gray;*/
-/*}
 
-.navbar {
+
+/*.navbar {
     padding: 0px !important;
 }
 
