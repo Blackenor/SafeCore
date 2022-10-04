@@ -132,10 +132,10 @@
                                     <a asp-area="" asp-controller="Report" asp-action="ReportClient" >Reporte cliente</a>
                                 </li>
                                 <li>
-                                    <a asp-area="" asp-controller="Report" asp-action="ReportClient" >Reporte global</a>
+                                    <a asp-area="" asp-controller="Report" asp-action="ReportGlobal" >Reporte global</a>
                                 </li>
                                 <li>
-                                    <a asp-area="" asp-controller="Report" asp-action="Index" >Reportar accidente</a>
+                                    <a asp-area="" asp-controller="Report" asp-action="ReportAccidente" >Reportar accidente</a>
                                 </li>
                             </ul>
                         </li>
@@ -165,10 +165,10 @@
         <div id="content">
 
             <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
+                <div class="container-fluid collapse-container">
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
+                        <i class="fas fa-align-justify"></i>
+                        @*<span></span>*@
                     </button>
                 </div>
             </nav>

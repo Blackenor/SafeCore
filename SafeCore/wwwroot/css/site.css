@@ -166,8 +166,12 @@ ul ul a{
     margin-top: 10px;
 }
 
-/* TOP OPTIONS */
+.collapse-container {
+    padding-left: 0 !important;
 
+
+}
+/* TOP OPTIONS */
 #topOptions {
     max-height: 73vh !important;
     overflow: auto;
@@ -199,6 +203,7 @@ ul ul a{
     /*width: auto;*/
     width: 100vw;
     padding: 10px;
+    padding-left: 0 !important; 
     min-height: 100vh;
     transition: all 0.3s;
 }

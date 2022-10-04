@@ -8,5 +8,13 @@ namespace SafeCore.Controllers
         {
             return View();
         }
+        public IActionResult ReportGlobal()
+        {
+            return View();
+        }
+        public IActionResult ReportAccidente()
+        {
+            return View();
+        }
     }
 }
