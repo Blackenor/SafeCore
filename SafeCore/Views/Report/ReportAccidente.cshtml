@@ -1,7 +1,33 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    
 }
+@using System;
 
-<h2>REPORTE DE ACCIDENTE</h2>
+
+<div class="mb-3">
+    <h1>aa</h1>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <li>
+                <label for="number" class"form-label">@ViewData["Numero"]</label>
+            </li>
+            <li>
+                <label for="number" class"form-label">Rut cliente:</label>
+                <input type="number" id="number" class="form-control" name="user_rut">
+            </li>
+            <li>
+                <label for="date" class"form-label">Fecha Accidente:</label>
+                <input type="date" name="date_user" class="form-control">
+            </li>
+            <li>
+                <label for="msg" class"form-label">Reporte:</label>
+                <textarea class="form-control" name="msg" type="text" placeholder="Escriba algo"></textarea>
+            </li>
+
+            <li class="button">
+                <button type="submit">Envíe su mensaje</button>
+            </li>
+        </ul>
+    </form>
+</div>
+

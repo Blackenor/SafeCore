@@ -16,5 +16,20 @@ namespace SafeCore.Controllers
         {
             return View();
         }
+
+        public ActionResult Random2()
+        {
+            Random numerito = new Random();
+            numerito.Next(99999);  
+            ViewData["Numero"] = "Su numero id generado es: " + numerito;
+
+
+            return View();
+        }
     }
+    
+    
 }
+
+
+
